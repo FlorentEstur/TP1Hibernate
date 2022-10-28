@@ -2,6 +2,7 @@ package com.Hibernate.TP1Hibernate.Model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -15,7 +16,7 @@ public class Ville {
 	protected int cp;
 	protected String nom;
 	
-	@OneToMany (mappedBy = "ville")
+	@OneToMany (mappedBy = "ville", cascade = CascadeType.ALL)
 	protected List<Aeroport> listeAeroport;
 	
 	public Ville() {

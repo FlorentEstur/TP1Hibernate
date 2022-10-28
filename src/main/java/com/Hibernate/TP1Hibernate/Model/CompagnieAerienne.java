@@ -2,6 +2,7 @@ package com.Hibernate.TP1Hibernate.Model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -17,7 +18,7 @@ public class CompagnieAerienne {
 	protected int idCompagnie;
 	protected String nom;
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name="Compagnie_Vol",
 				joinColumns = @JoinColumn(name="numv"),
 					inverseJoinColumns = @JoinColumn(name="idCompagnie"))

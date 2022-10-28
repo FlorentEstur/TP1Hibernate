@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -99,6 +100,14 @@ public class Vol {
 
 	public void setHeureArrivee(LocalDateTime heureArrivee) {
 		this.heureArrivee = heureArrivee;
+	}
+
+	public List<Reservation> getListeReservation() {
+		return listeReservation;
+	}
+
+	public void setListeReservation(List<Reservation> listeReservation) {
+		this.listeReservation = listeReservation;
 	}
 
 	@Override

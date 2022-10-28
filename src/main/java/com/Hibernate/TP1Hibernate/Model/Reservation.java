@@ -1,6 +1,8 @@
 package com.Hibernate.TP1Hibernate.Model;
 
 import java.time.LocalDate;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
