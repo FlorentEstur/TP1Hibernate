@@ -85,6 +85,7 @@ public class App
     	session.beginTransaction();
     	System.out.println("Saisir le numéro de la réservation à annuler");
     	int numres = scan.nextInt();
+    	
     	Reservation r1 = session.get(Reservation.class, numres);
     	session.delete(r1);
     	
