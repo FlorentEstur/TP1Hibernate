@@ -145,3 +145,20 @@
 2022-Oct-28 11:20:01 AM [main] DEBUG org.hibernate.SQL - select reservatio_.numR, reservatio_.idClient as idclient3_6_, reservatio_.dateR as dater2_6_, reservatio_.idPassager as idpassager4_6_, reservatio_.numV as numv5_6_ from Reservation reservatio_ where reservatio_.numR=?
 2022-Oct-28 11:20:03 AM [main] DEBUG org.hibernate.SQL - insert into Reservation (idClient, dateR, idPassager, numV, numR) values (?, ?, ?, ?, ?)
 2022-Oct-28 11:20:09 AM [main] DEBUG org.hibernate.SQL - delete from Reservation where numR=?
+2022-Oct-28 12:24:25 PM [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2022-Oct-28 12:24:27 PM [main] DEBUG org.hibernate.SQL - create table InfosEscale (heureArrivee number(10,0) not null, heureDepart number(10,0) not null)
+2022-Oct-28 12:24:27 PM [main] DEBUG org.hibernate.SQL - alter table InfosEscale add constraint FKqbcldhqqcxue1drww9548hfbe foreign key (heureDepart) references Vol
+2022-Oct-28 12:24:27 PM [main] DEBUG org.hibernate.SQL - alter table InfosEscale add constraint FKedmh0f163unwe000ur78x42sx foreign key (heureArrivee) references Aeroport
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - select client_.id, client_.adresse as adresse2_1_, client_.email as email3_1_, client_.nom as nom4_1_, client_.prenom as prenom5_1_, client_.telephone as telephone6_1_ from Client client_ where client_.id=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - select reservatio_.numR, reservatio_.idClient as idclient3_6_, reservatio_.dateR as dater2_6_, reservatio_.idPassager as idpassager4_6_, reservatio_.numV as numv5_6_ from Reservation reservatio_ where reservatio_.numR=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - select passager_.idPassage, passager_.nom as nom2_5_, passager_.prenom as prenom3_5_ from Passager passager_ where passager_.idPassage=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - select vol_.numV, vol_.arrivee as arrivee6_8_, vol_.depart as depart7_8_, vol_.dateArrivee as datearrivee2_8_, vol_.dateDepart as datedepart3_8_, vol_.heureArrivee as heurearrivee4_8_, vol_.heureDepart as heuredepart5_8_ from Vol vol_ where vol_.numV=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - select compagniea_.idCompagnie, compagniea_.nom as nom2_3_ from CompagnieAerienne compagniea_ where compagniea_.idCompagnie=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - select aeroport_.idAeroport, aeroport_.nom as nom2_0_, aeroport_.cp as cp3_0_ from Aeroport aeroport_ where aeroport_.idAeroport=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - select ville_.cp, ville_.nom as nom2_7_ from Ville ville_ where ville_.cp=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - update Vol set arrivee=?, depart=?, dateArrivee=?, dateDepart=?, heureArrivee=?, heureDepart=? where numV=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - delete from InfosEscale where heureDepart=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - delete from Compagnie_Vol where idCompagnie=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - delete from Compagnie_Vol where numv=?
+2022-Oct-28 12:24:28 PM [main] DEBUG org.hibernate.SQL - delete from InfosEscale where heureArrivee=?
+2022-Oct-28 12:24:28 PM [main] INFO  com.Hibernate.TP1Hibernate.App - Fin
